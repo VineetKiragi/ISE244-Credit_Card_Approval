@@ -1,71 +1,140 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Banglore Home Price Prediction</title>
+    <title>Credit Card Prediction</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="app.js"></script>
 	<link rel="stylesheet" href="app.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
 <div class="img"></div>
-<form class="form">
-	<h2>Area (Square Feet)</h2>
-    <input class="area"  type="text" id="uiSqft" class="floatLabel" name="Squareft" value="1000">
-	<h2>BHK</h2>
-	<div class="switch-field">
-		<input type="radio" id="radio-bhk-1" name="uiBHK" value="1"/>
-		<label for="radio-bhk-1">1</label>
-		<input type="radio" id="radio-bhk-2" name="uiBHK" value="2" checked/>
-		<label for="radio-bhk-2">2</label>
-		<input type="radio" id="radio-bhk-3" name="uiBHK" value="3"/>
-		<label for="radio-bhk-3">3</label>
-		<input type="radio" id="radio-bhk-4" name="uiBHK" value="4"/>
-		<label for="radio-bhk-4">4</label>
-		<input type="radio" id="radio-bhk-5" name="uiBHK" value="5"/>
-		<label for="radio-bhk-5">5</label>
+<div class="container">
+<form class="row" >
+	<div class="col-sm">
+	<h2 >Gender</h2>
+	<div class="switch-field" >
+		<input type="radio" id="radio-Gender-1" name="uiGender" value="1"/>
+		<label for="radio-Gender-1">Male</label>
+		<input type="radio" id="radio-Gender-2" name="uiGender" value="0" checked/>
+		<label for="radio-Gender-2">Female</label>
 	</div>
+</div>
+<div class="col-sm">
+	<h2 >Car Owner</h2>
+	<div class="switch-field" >
+		<input type="radio" id="radio-CarOwner-1" name="uiCarOwner" value="1"/>
+		<label for="radio-CarOwner-1">Yes</label>
+		<input type="radio" id="radio-CarOwner-2" name="uiCarOwner" value="0" checked/>
+		<label for="radio-CarOwner-2">No</label>
+	</div>
+</div>
+<div class="col-sm">
+	<h2 >Property Owner</h2>
+	<div class="switch-field" >
+		<input type="radio" id="radio-PO-1" name="uiPO" value="1"/>
+		<label for="radio-PO-1">Yes</label>
+		<input type="radio" id="radio-PO-2" name="uiPO" value="0" checked/>
+		<label for="radio-PO-2">No</label>
+	</div>
+</div>
+<div class="col-sm">
+	<h2 >Employed</h2>
+		<div class="switch-field" >
+			<input type="radio" id="radio-emp-1" name="uiemp" value="1"/>
+			<label for="radio-emp-1">Yes</label>
+			<input type="radio" id="radio-emp-2" name="uiemp" value="0" checked/>
+			<label for="radio-emp-2">No</label>
+		</div>
+</div>
 	</form>
-<form class="form">
-	<h2>Bath</h2>
-	<div class="switch-field">
-		<input type="radio" id="radio-bath-1" name="uiBathrooms" value="1"/>
-		<label for="radio-bath-1">1</label>
-		<input type="radio" id="radio-bath-2" name="uiBathrooms" value="2" checked/>
-		<label for="radio-bath-2">2</label>
-		<input type="radio" id="radio-bath-3" name="uiBathrooms" value="3"/>
-		<label for="radio-bath-3">3</label>
-		<input type="radio" id="radio-bath-4" name="uiBathrooms" value="4"/>
-		<label for="radio-bath-4">4</label>
-		<input type="radio" id="radio-bath-5" name="uiBathrooms" value="5"/>
-		<label for="radio-bath-5">5</label>
-	</div>
-    </form>
-<form class="form">
-    <h2>Balcony</h2>
-	<div class="switch-field">
-		<input type="radio" id="radio-bal-1" name="uibal" value="1"/>
-		<label for="radio-bal-1">1</label>
-		<input type="radio" id="radio-bal-2" name="uibal" value="2" checked/>
-		<label for="radio-bal-2">2</label>
-		<input type="radio" id="radio-bal-3" name="uibal" value="3"/>
-		<label for="radio-bal-3">3</label>
-		<input type="radio" id="radio-bal-4" name="uibal" value="4"/>
-		<label for="radio-bal-4">4</label>
-		<input type="radio" id="radio-bal-5" name="uibal" value="5"/>
-		<label for="radio-bal-5">5</label>
-	</div>
-    </form>
-		
-	<div class="form">
-        <h2>Location</h2>
-        <select class="location" name="" id="uiLocations">
-            <option value="" disabled="disabled" selected="selected">Choose a Location</option>
-		    <option>Electronic City</option>
-            <option>Rajaji Nagar</option>
-        </select>
+</div>
+
+
+<form class="form" >
     
-	    <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
-	    <div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+	
+    </form>
+	<div class="container">
+	<form class="row">
+		<div class="col-sm">
+		<h2>No of Children</h2>
+		<input class="area "  type="text" id="uichild" class="floatLabel" name="child" value="1">
+		</div>	
+		<div class="col-sm">
+		<h2>No of Family Members</h2>
+		<input class="area"  type="text" id="uifam" class="floatLabel" name="fam" value="1">
+		</div>	
+		<div class="col-sm">
+		<h2>Account Length</h2>
+		<input class="area"  type="text" id="uiacc" class="floatLabel" name="acc" value="1">
+		</div>	
+	</form>
+</div>
+	<div class="container">
+	<form class=" row">
+		<div class="col-sm">
+		<h2>Total Income</h2>
+		<input class="area"  type="text" id="uiincome" class="floatLabel" name="income" value="1">
+		</div>
+		<div class="col-sm">
+		<h2>Age</h2>
+		<input class="area"  type="text" id="uiage" class="floatLabel" name="age" value="10">
+		</div>
+		<div class="col-sm">
+		<h2>Years Employed</h2>
+		<input class="area"  type="text" id="uiyemp" class="floatLabel" name="yemp" value="1">
+		</div>
+	</form>
+</div>
+	<div class="container">
+		<div class="row">
+		<div class="col-sm">
+        <h2>Income Type</h2>
+        <select class="location" name="" id="uiIncome">
+            <option value="" disabled="disabled" selected="selected">Choose Income Type</option>
+        </select>
+	</div>
+	<div class="col-sm">
+		<h2>Education Type</h2>
+		<select class="location" name="" id="uiEducation">
+			<option value="" disabled="disabled" selected="selected">Choose Education Type</option>
+		</select>
+	</div>
+	<div class="col-sm">
+		<h2>Relationship Status</h2>
+		<select class="location" name="" id="uiRelationship">
+			<option value="" disabled="disabled" selected="selected">Choose a Relationship Status</option>
+		</select>
+	</div>
+	
+	
+	</div>
+	</div>
+	<div class="container">
+	<div class="row">
+	<div class="col-sm">
+		<h2>Housing Type</h2>
+		<select class="location" name="" id="uiHousing">
+			<option value="" disabled="disabled" selected="selected">Choose a Housing Type</option>
+		</select>
+	</div>
+	<div class="col-sm">
+		<h2>Occupation Type</h2>
+		<select class="location" name="" id="uiOccupation">
+			<option value="" disabled="disabled" selected="selected">Choose a Occupation Type</option>
+		</select>
+	</div>
+</div>
+</div>
+	<div class="container">
+		<div class="row">
+	    <button class="submit col-sm" onclick="onClickedEstimatePrice()" type="button">Credit Card Approval</button>
+	</div>
+		<div class="row">
+	    <div id="uiEstimatedPrice" class="result col-sm">	<h2></h2> </div>
+	</div>
+	</div>
     </div>
 </body>
 </html>
